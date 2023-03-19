@@ -6,13 +6,13 @@ const router=require('./routes/getQuoteRouter')
 const contactUsRouter=require('./routes/contactUsRouter')
 app.use(express.json())
 app.use(cors())
-const port=5000
+
 
 
 app.use(router)
 app.use(contactUsRouter)
 
 
-app.listen(port,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Seriver is up and running")
 })
