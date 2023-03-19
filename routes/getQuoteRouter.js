@@ -27,10 +27,9 @@ router.post("/api/quote/", (req, res) => {
         }
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
-                console.log("Error", error);
+
             }
             else {
-                console.log("Email sent", info.response)
                 res.status(201).json({ status: 201, info })
             }
         })
